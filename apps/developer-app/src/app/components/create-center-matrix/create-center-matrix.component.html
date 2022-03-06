@@ -1,0 +1,157 @@
+  <form [formGroup]="centerMatrixForm" (ngSubmit)="actionLabel === 'Create' ? onSubmitCenterMatrix() : onUpdateCenterMatrix()">
+    <div class="row">
+      <input type="hidden" id="id" formControlName="id">
+
+      <div class="col-md-4 mb-3">
+        <label for="validationCenter_name">Center name</label>
+        <input type="text" class="form-control" id="validationCenter_name" formControlName="center_name"  placeholder="Center name"  required [ngClass]="{ 'is-invalid': submitted && fields['center_name'].errors }">
+        <div *ngIf="submitted && fields['center_name'].errors" class="invalid-feedback">
+          Please provide a valid Center name.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationGSSN_COMPANYID">Company ID</label>
+        <input type="text" class="form-control" id="validationGSSN_COMPANYID" formControlName="GSSN_COMPANYID" placeholder="Company ID" required [ngClass]="{ 'is-invalid': submitted && fields['GSSN_COMPANYID'].errors }">
+        <div *ngIf="submitted && fields['GSSN_COMPANYID'].errors" class="invalid-feedback">
+          Please provide a valid Company ID.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationGSSN_OUTLETID">Outlet ID</label>
+        <input type="text" class="form-control" id="validationGSSN_OUTLETID" formControlName="GSSN_OUTLETID" placeholder="Outlet ID" required [ngClass]="{ 'is-invalid': submitted && fields['GSSN_OUTLETID'].errors }">
+        <div *ngIf="submitted && fields['GSSN_OUTLETID'].errors" class="invalid-feedback">
+          Please provide a valid Outlet ID.
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="validationVd_name">Vd name</label>
+        <input type="text" class="form-control" id="validationVd_name" formControlName="vd_name"  placeholder="Vd name"  required [ngClass]="{ 'is-invalid': submitted && fields['vd_name'].errors }">
+        <div *ngIf="submitted && fields['vd_name'].errors" class="invalid-feedback">
+          Please provide a valid Vd name.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationvfnr">Vfnr</label>
+        <input type="text" class="form-control" id="validationvfnr" formControlName="vfnr"  placeholder="Vfnr" required [ngClass]="{ 'is-invalid': submitted && fields['vfnr'].errors }">
+        <div *ngIf="submitted && fields['vfnr'].errors" class="invalid-feedback">
+          Please provide a valid Vfnr.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationVfnr_hb">Vfnr hb</label>
+        <input type="text" class="form-control" id="validationVfnr_hb" formControlName="vfnr_hb"  placeholder="Vfnr hb" required [ngClass]="{ 'is-invalid': submitted && fields['vfnr_hb'].errors }">
+        <div *ngIf="submitted && fields['vfnr_hb'].errors" class="invalid-feedback">
+          Please provide a valid Vfnr hb.
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="validationMode">Mode</label>
+        <input type="text" class="form-control" id="validationMode" formControlName="mode"  placeholder="Mode"  required [ngClass]="{ 'is-invalid': submitted && fields['mode'].errors }">
+        <div *ngIf="submitted && fields['mode'].errors" class="invalid-feedback">
+          Please provide a valid Mode.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationSortorder">Sort order</label>
+        <input type="text" class="form-control" id="validationSortorder" formControlName="sortorder"  placeholder="Sort order" required [ngClass]="{ 'is-invalid': submitted && fields['sortorder'].errors }">
+        <div *ngIf="submitted && fields['sortorder'].errors" class="invalid-feedback">
+          Please provide a valid Sort order.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationBrand">Brand</label>
+        <input type="text" class="form-control" id="validationBrand" formControlName="brand"  placeholder="Brand" required [ngClass]="{ 'is-invalid': submitted && fields['brand'].errors }">
+        <div *ngIf="submitted && fields['brand'].errors" class="invalid-feedback">
+          Please provide a valid Brand.
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="validationStatus">Status</label>
+        <input type="text" class="form-control" id="validationStatus" formControlName="status"  placeholder="Status"  required [ngClass]="{ 'is-invalid': submitted && fields['status'].errors }">
+        <div *ngIf="submitted && fields['status'].errors" class="invalid-feedback">
+          Please provide a valid Status.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationShortcut">Shortcut</label>
+        <input type="text" class="form-control" id="validationShortcut" formControlName="shortcut"  placeholder="Shortcut" required [ngClass]="{ 'is-invalid': submitted && fields['shortcut'].errors }">
+        <div *ngIf="submitted && fields['shortcut'].errors" class="invalid-feedback">
+          Please provide a valid Shortcut.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationCompany_name">Company name</label>
+        <input type="text" class="form-control" id="validationCompany_name" formControlName="company_name"  placeholder="Company name" required [ngClass]="{ 'is-invalid': submitted && fields['company_name'].errors }">
+        <div *ngIf="submitted && fields['company_name'].errors" class="invalid-feedback">
+          Please provide a valid Company name.
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="validationBranch">Branch</label>
+        <input type="text" class="form-control" id="validationBranch" formControlName="branch"  placeholder="Branch"  required [ngClass]="{ 'is-invalid': submitted && fields['branch'].errors }">
+        <div *ngIf="submitted && fields['branch'].errors" class="invalid-feedback">
+          Please provide a valid Branch.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationWebsite">Website</label>
+        <input type="text" class="form-control" id="validationWebsite" formControlName="website"  placeholder="Website" required [ngClass]="{ 'is-invalid': submitted && fields['website'].errors }">
+        <div *ngIf="submitted && fields['website'].errors" class="invalid-feedback">
+          Please provide a valid Website.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationPhone">Phone</label>
+        <input type="text" class="form-control" id="validationPhone" formControlName="phone"  placeholder="Phone" required [ngClass]="{ 'is-invalid': submitted && fields['phone'].errors }">
+        <div *ngIf="submitted && fields['phone'].errors" class="invalid-feedback">
+          Please provide a valid Phone.
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 mb-3">
+        <label for="validationRegion">Region</label>
+        <input type="text" class="form-control" id="validationRegion" formControlName="region"  placeholder="region" required [ngClass]="{ 'is-invalid': submitted && fields['region'].errors }">
+        <div *ngIf="submitted && fields['region'].errors" class="invalid-feedback">
+          Please provide a valid Region.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationPlace">Place</label>
+        <input type="text" class="form-control" id="validationPlace" formControlName="place"  placeholder="Place" required [ngClass]="{ 'is-invalid': submitted && fields['place'].errors }">
+        <div *ngIf="submitted && fields['place'].errors" class="invalid-feedback">
+          Please provide a valid Place.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationStreet">Street</label>
+        <input type="text" class="form-control" id="validationStreet" formControlName="street"  placeholder="Street" required [ngClass]="{ 'is-invalid': submitted && fields['street'].errors }">
+        <div *ngIf="submitted && fields['street'].errors" class="invalid-feedback">
+          Please provide a valid Street.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationZip">Zip</label>
+        <input type="text" class="form-control" id="validationZip" formControlName="zip"  placeholder="Zip" required [ngClass]="{ 'is-invalid': submitted && fields['zip'].errors }">
+        <div *ngIf="submitted && fields['zip'].errors" class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit"> {{actionLabel === 'Create' ? 'Create' : 'Update' }}</button>
+  </form>

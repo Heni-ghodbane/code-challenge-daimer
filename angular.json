@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "projects": {
+    "backend-center-matrix": "libs/backend/center-matrix",
+    "common-center-matrix": "libs/common/center-matrix",
+    "dev-server": "apps/dev-server",
+    "developer-app": "apps/developer-app",
+    "developer-app-e2e": "apps/developer-app-e2e"
+  }
+}

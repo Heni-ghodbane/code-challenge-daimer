@@ -1,0 +1,19 @@
+<!-- <tss-job-interview-nx-welcome></tss-job-interview-nx-welcome> -->
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-body">
+      <h1 class='pb-3'>Center Matrix - Daimler TSS</h1>
+
+      <ul class="nav nav-tabs" >
+        <li class="nav-item">
+          <a class='nav-link' routerLink="/new" [class.active]="isTabActive('/new') || isTabActive('/update') || isTabActive('/')">Center Matrix Form</a>
+        </li>
+        <li class="nav-item">
+          <a class='nav-link' routerLink="/list"  [class.active]="isTabActive('/list')">Overview Center Matrix</a>
+        </li>
+      </ul>
+      <div class='pt-3'></div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
