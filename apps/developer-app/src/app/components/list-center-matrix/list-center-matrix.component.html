@@ -26,7 +26,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let oneMatrix of listCenterMatrix; let i = index">
+  <tr *ngFor="let oneMatrix of listCenterMatrix.reverse()">
     <th scope="row">{{oneMatrix.id}}</th>
     <td>{{oneMatrix.center_name}}</td>
     <td>{{oneMatrix.GSSN_COMPANYID}}</td>
@@ -49,7 +49,7 @@
     <td>{{oneMatrix.website}}</td>
     <td>
       <button type="button" class="btn btn-success" [routerLink]="['/update', oneMatrix.id ]"><i class="fa fa-pencil"></i></button>
-      <button type="button" class="btn btn-danger" (click)='setCurrentMatrixItemId(oneMatrix.id)' data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash-o"></i></button>
+      <button type="button" class="btn btn-danger" (click)='setCurrentMatrixItemId(oneMatrix?.id)' data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash-o"></i></button>
     </td>
   </tr>
   </tbody>
